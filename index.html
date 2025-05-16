@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Verificação de Acesso</title>
+
+    <!-- CSS do Flatpickr -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -14,13 +18,13 @@
     <p>Digite a data de nascimento do pai, da mãe ou do filho:</p>
 
     <label for="dataPai">Data de nascimento do pai:</label>
-    <input type="date" id="dataPai" />
+    <input type="text" id="dataPai" placeholder="YYYY-MM-DD" readonly />
 
     <label for="dataMae">Data de nascimento da mãe:</label>
-    <input type="date" id="dataMae" />
+    <input type="text" id="dataMae" placeholder="YYYY-MM-DD" readonly />
 
     <label for="dataFilho">Data de nascimento do filho:</label>
-    <input type="date" id="dataFilho" />
+    <input type="text" id="dataFilho" placeholder="YYYY-MM-DD" readonly />
 
     <button onclick="verificarDatas()">Entrar</button>
 </div>
@@ -50,6 +54,26 @@
   <img class="modal-conteudo" id="imgModal" />
 </div>
 
+<!-- JS do Flatpickr -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
 <script src="script.js"></script>
+
+<script>
+  // Inicializa Flatpickr nos inputs
+  flatpickr("#dataPai", {
+    dateFormat: "Y-m-d",
+    maxDate: "today"
+  });
+  flatpickr("#dataMae", {
+    dateFormat: "Y-m-d",
+    maxDate: "today"
+  });
+  flatpickr("#dataFilho", {
+    dateFormat: "Y-m-d",
+    maxDate: "today"
+  });
+</script>
+
 </body>
 </html>
