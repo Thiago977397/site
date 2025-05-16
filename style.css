@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #fff5f5; /* fundo claro avermelhado */
+    color: #4a0000; /* texto escuro avermelhado */
+}
+
+header {
+    background-color: #b71c1c; /* vermelho escuro */
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.galeria img {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f8d7da; /* tom suave avermelhado */
+    color: #721c24; /* texto em vermelho escuro */
+    margin-top: 2rem;
+}
