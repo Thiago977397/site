@@ -1,26 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Família 💖</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Verificação de Acesso</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+<!-- Tela de verificação -->
+<div class="verificacao" id="telaVerificacao">
+    <h2>Verificação de Acesso</h2>
+    <p>Digite a data de nascimento do pai, da mãe ou do filho:</p>
+
+    <label for="dataPai">Data de nascimento do pai:</label>
+    <input type="date" id="dataPai" />
+
+    <label for="dataMae">Data de nascimento da mãe:</label>
+    <input type="date" id="dataMae" />
+
+    <label for="dataFilho">Data de nascimento do filho:</label>
+    <input type="date" id="dataFilho" />
+
+    <button onclick="verificarDatas()">Entrar</button>
+</div>
+
+<!-- Conteúdo do site -->
+<div id="conteudoSite">
     <header>
-        <h1>Minha Família</h1>
-        <p>Fotos e lembranças especiais</p>
+        <h1>Bem-vindo ao site!</h1>
     </header>
 
-    <main class="galeria">
-        <img src="fotos/foto1.jpg.jpeg" alt="Foto 1">
-        <img src="fotos/foto2.jpg.jpeg" alt="Foto 2">
-        <img src="fotos/foto3.jpg.jpeg" alt="Foto 3">
-        <img src="fotos/foto4.jpg.jpeg" alt="Foto 4">
-        <img src="fotos/foto5.jpg.jpeg" alt="Foto 5">
-    </main>
+    <div class="galeria">
+        <img src="fotos/foto1.jpg.jpeg" alt="Imagem 1" onclick="abrirModalImagem(this.src)" />
+        <img src="fotos/foto2.jpg.jpeg" alt="Imagem 2" onclick="abrirModalImagem(this.src)" />
+        <img src="fotos/foto3.jpg.jpeg" alt="Imagem 3" onclick="abrirModalImagem(this.src)" />
+        <img src="fotos/foto4.jpg.jpeg" alt="Imagem 4" onclick="abrirModalImagem(this.src)" />
+        <img src="fotos/foto5.jpg.jpeg" alt="Imagem 5" onclick="abrirModalImagem(this.src)" />
+    </div>
 
     <footer>
-        <p>Feito com carinho 💕</p>
+        <p>&copy; 2025 - Meu Site</p>
     </footer>
+</div>
+
+<!-- Modal para imagem ampliada -->
+<div id="modalImagem" class="modal">
+  <span class="fechar">&times;</span>
+  <img class="modal-conteudo" id="imgModal" />
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
